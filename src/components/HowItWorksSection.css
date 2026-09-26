@@ -1,0 +1,284 @@
+/* how-it-works-section.css */
+
+/* --- CSS Variables for precise color management --- */
+:root {
+  --text-main: #2d3748; /* Main body text (grey-black) */
+  --text-title: #232d3f; /* Main headings (bold, geometric font style) */
+  --text-description: #718096; /* Light grey for text and number-titles */
+
+  /* The specific background colors with opacity handled by component logic */
+  --card-overlay-1: #e0d3f8; /* Purple */
+  --card-overlay-2: #fbe2da; /* Pinkish-Peach */
+  --card-overlay-3: #fbf3f1; /* Light Pink */
+  --card-overlay-4: #e6f6ed; /* Green */
+
+  /* Gradient for "Works" */
+  --gradient-works-start: #3b82f6; /* Blue start */
+  --gradient-works-end: #8b5cf6; /* Purple end */
+
+  --button-background: #fff;
+  --button-shadow: rgba(0, 0, 0, 0.05);
+
+  /* Font Families - Uses a geometric sans-serif stack as placeholder */
+  --font-stack-bold:
+    "Poppins-Bold", "Montserrat-Bold", system-ui, -apple-system, sans-serif;
+  --font-stack-regular:
+    "Poppins", "Montserrat", system-ui, -apple-system, sans-serif;
+}
+
+/* Override font weights if poppins is not loaded globally, using standard system fallbacks */
+@supports (font-weight: 700) {
+  :root {
+    --font-stack-bold: system-ui, -apple-system, sans-serif;
+    --font-stack-regular: system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* --- Section Container --- */
+.how-it-works-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: var(--font-stack-regular);
+  color: var(--text-main);
+  background-color: #fbfbfc; /* Very subtle off-white background for the section */
+}
+
+/* --- Main Heading --- */
+.how-it-works-heading {
+  font-family: var(--font-stack-regular);
+  font-size: 3rem;
+  font-weight: 300; /* Replicates the light weight from the image */
+  margin-bottom: 60px;
+  color: #000;
+}
+
+.how-it-works-heading .gradient-works {
+  font-weight: 400; /* Slightly heavier than "How it" */
+  color: var(--gradient-works-start);
+  background: linear-gradient(
+    to right,
+    var(--gradient-works-start),
+    var(--gradient-works-end)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; /* Essential for text gradients on some browsers */
+}
+
+/* --- The Grid Layout --- */
+.how-it-works-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Responsively adjusts columns */
+  gap: 30px;
+  justify-content: center;
+}
+
+/* --- The Card Style --- */
+.how-it-works-card {
+  position: relative; /* Essential for positioning overlay/pseudo-elements */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  overflow: hidden; /* Important to keep the background within the card shape */
+  background-color: #fff; /* White base if no image loads */
+}
+
+/* The card's faint context background image and color overlay logic */
+.card-background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* The context image from the component style prop, with no external URLs */
+  background-image: var(--card-background-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  z-index: 1; /* Place below text and buttons */
+}
+
+/* Pseudo-element on the overlay for the color overlay itself */
+.card-background-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* The specific color from the component, with the requested opacity */
+  background-color: var(--card-overlay-color);
+  opacity: var(--card-overlay-opacity);
+}
+
+/* Wrapper for text content to sit on top of the background */
+.card-content-wrapper {
+  position: relative;
+  z-index: 2; /* Place above the overlay */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 400px; /* Replicate the aspect ratio/minimum height of the cards */
+  justify-content: space-between; /* Bottom bar goes to the end */
+  text-align: left; /* Text aligns to the left as per the image */
+}
+
+/* Header with Number and Title */
+.card-header {
+  margin-bottom: 15px;
+}
+
+.step-number {
+  font-size: 3rem;
+  font-weight: 300; /* Light weight from the image */
+  font-family: var(--font-stack-regular);
+  color: rgba(14, 13, 13, 0.4);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.step-title {
+  font-size: 1.5rem;
+  font-weight: 700; /* Bold weight */
+  font-family: var(--font-stack-bold);
+  color: var(--text-title);
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Description text - matches text style 2 */
+.step-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 500; /* Light description text style */
+  color: var(--text-description);
+  margin: 0 0 40px;
+  flex-grow: 1; /* Replicates space between text and bottom icons */
+}
+
+/* Bottom Bar with Icon and Optional Button */
+.card-bottom-bar {
+  display: flex;
+  justify-content: space-between; /* Icon on left, button on right */
+  align-items: center;
+  margin-top: auto;
+}
+
+.step-icon {
+  color: var(--text-main); /* Match main text color for now */
+  display: flex;
+  align-items: center;
+}
+
+/* The Arrow Button */
+.how-it-works-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--button-background);
+  color: var(--text-main);
+  box-shadow: 0 4px 6px var(--button-shadow);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  padding: 0;
+}
+
+.how-it-works-arrow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================================================
+   RESPONSIVE ADJUSTMENTS (TABLET & MOBILE)
+   ========================================================================== */
+
+/* --- Tablet View (1080px down to 769px) --- */
+@media (max-width: 1080px) {
+  .how-it-works-container {
+    padding: 60px 40px;
+  }
+
+  .how-it-works-heading {
+    font-size: 2.5rem; /* Sized down slightly for tablets */
+    margin-bottom: 40px;
+  }
+
+  .how-it-works-grid {
+    gap: 20px;
+    /* auto-fit will naturally move to 2 columns here */
+  }
+}
+
+/* --- Small Tablet / Large Mobile (768px down to 501px) --- */
+@media (max-width: 768px) {
+  .how-it-works-container {
+    padding: 50px 20px;
+  }
+
+  .how-it-works-heading {
+    font-size: 2.2rem;
+  }
+
+  .how-it-works-grid {
+    grid-template-columns: 1fr; /* Start stacking earlier for better readability */
+  }
+
+  .card-content-wrapper {
+    min-height: 320px; /* Reduce height slightly so it fits better on screen */
+    padding: 25px;
+  }
+}
+
+/* --- STRICT VERTICAL MOBILE (500px and below) --- */
+@media (max-width: 500px) {
+  .how-it-works-container {
+    padding: 40px 15px;
+  }
+
+  .how-it-works-heading {
+    font-size: 1.8rem; /* Scaled down for small phones */
+    margin-bottom: 30px;
+    line-height: 1.2;
+  }
+
+  .how-it-works-grid {
+    grid-template-columns: 1fr !important; /* Force vertical stacking */
+    gap: 15px;
+  }
+
+  .card-content-wrapper {
+    padding: 20px;
+    min-height: 280px; /* Tightened up for small screens */
+  }
+
+  .step-number {
+    font-size: 2.2rem; /* Smaller number so it doesn't push title down too far */
+  }
+
+  .step-title {
+    font-size: 1.3rem;
+  }
+
+  .step-description {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+  }
+
+  .how-it-works-arrow {
+    width: 38px;
+    height: 38px; /* Slightly smaller button for mobile */
+  }
+}

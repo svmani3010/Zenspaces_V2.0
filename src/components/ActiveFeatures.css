@@ -1,0 +1,242 @@
+/* ========================
+   ACTIVE FEATURES SECTION
+======================== */
+
+.activefeatures-section {
+  padding: 40px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.activefeatures-panel {
+  background: #eeeff4;
+  border-radius: 12px;
+  /* Reduced side padding for better flexibility */
+  padding: 30px 5% 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Navigation Bar --- */
+.activefeatures-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 12px 20px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.activefeatures-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.activefeatures-nav__logo-img {
+  height: 32px;
+  object-fit: contain;
+}
+
+.activefeatures-nav__right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.activefeatures-nav__download {
+  font-size: 12px;
+  color: #b2b4b8;
+  font-weight: 500;
+}
+
+.activefeatures-nav__store-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #000;
+  border-radius: 6px;
+  padding: 6px 12px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.activefeatures-nav__store-btn:hover {
+  transform: translateY(-2px);
+}
+
+.activefeatures-nav__store-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.activefeatures-nav__store-label {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.activefeatures-nav__store-sub {
+  font-size: 8px;
+  color: #ccc;
+}
+
+/* --- Section Title --- */
+.activefeatures-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #626469;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* --- Responsive Grid --- */
+.activefeatures-grid {
+  display: grid;
+  /* Desktop: 3 columns */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* --- Feature Card --- */
+.activefeature-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease;
+}
+
+.activefeature-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.activefeature-card__img-wrap {
+  width: 100%;
+  height: 160px;
+  background: #f0f0f0;
+}
+
+.activefeature-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.activefeature-card__body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.activefeature-card__name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #4a4a4f;
+  margin-bottom: 8px;
+}
+
+.activefeature-card__desc {
+  font-size: 13px;
+  color: #8e8e93;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.activefeature-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.activefeature-card__tag {
+  background: #f0f1f3;
+  border: 1px solid #e1e2e6;
+  border-radius: 12px;
+  font-size: 11px;
+  color: #6e6e73;
+  padding: 4px 10px;
+}
+
+.activefeature-card__btn {
+  width: 100%;
+  background: #363f4f;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 0;
+  cursor: pointer;
+  margin-top: auto; /* Keeps buttons aligned */
+  transition: background 0.2s;
+}
+
+.activefeature-card__btn:hover {
+  background: #252b36;
+}
+
+/* ========================
+   RESPONSIVE BREAKPOINTS
+======================== */
+
+/* --- TABLET VIEW (1080px - 750px) --- */
+@media (max-width: 1080px) {
+  .activefeatures-panel {
+    padding: 30px 20px;
+  }
+
+  .activefeatures-grid {
+    /* Change to 2 columns if 3 items feel too tight */
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .activefeatures-nav {
+    padding: 10px 15px;
+  }
+}
+
+/* --- MOBILE VIEW (750px and below) --- */
+@media (max-width: 750px) {
+  .activefeatures-grid {
+    grid-template-columns: 1fr; /* Full width cards */
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  .activefeatures-nav {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .activefeatures-nav__right {
+    flex-direction: row; /* Keep store buttons side-by-side if they fit */
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* --- SMALL MOBILE (Below 500px) --- */
+@media (max-width: 500px) {
+  .activefeatures-nav__right {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .activefeatures-nav__store-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .activefeatures-title {
+    font-size: 22px;
+  }
+}

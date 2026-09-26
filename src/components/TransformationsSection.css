@@ -1,0 +1,156 @@
+.transformations-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.trans-main-title {
+  font-size: 42px;
+  font-weight: 300;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+.trans-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.trans-card {
+  background-color: #f7ebff;
+  padding: 24px;
+  border-radius: 16px;
+}
+
+.trans-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  /* Keep hidden for images, but the slider-container will handle the button overflow */
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.image-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.after-layer {
+  z-index: 1;
+}
+.before-layer {
+  z-index: 2;
+}
+
+/* Labels */
+.label {
+  position: absolute;
+  top: 15px;
+  padding: 6px 14px;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 6px;
+  z-index: 10;
+}
+.before-label {
+  left: 15px;
+  background: white;
+  color: #999;
+}
+.after-label {
+  right: 15px;
+  background: #811cc6;
+  color: white;
+}
+
+/* --- THE SLIDER CONTAINER --- */
+.slider-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  /* Allow the button to peak out slightly at the edges so the center hits 0 and 100 */
+  overflow: visible;
+}
+
+.vertical-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: white;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.glider-input {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  outline: none;
+  position: absolute;
+  top: 0;
+  /* FIX: Expand width by the button size (48px) and offset by half (24px) */
+  /* This ensures the CENTER of the button hits the edge of the image */
+  width: calc(100% + 48px);
+  left: -24px;
+  height: 100%;
+  margin: 0;
+  cursor: col-resize;
+}
+
+/* THE BUTTON (Thumb) - Arrow SVG updated for spacing <  > */
+.glider-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 48px;
+  height: 48px;
+  background-color: #811cc6;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+
+  /* NEW SVG: Added space between the two arrow paths */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8 18l-6-6 6-6 1.41 1.41L4.83 12l4.58 4.59L8 18z'/%3E%3Cpath d='M16 18l6-6-6-6-1.41 1.41L19.17 12l-4.58 4.59L16 18z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 28px;
+}
+
+.glider-input::-moz-range-thumb {
+  width: 48px;
+  height: 48px;
+  background-color: #811cc6;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8 18l-6-6 6-6 1.41 1.41L4.83 12l4.58 4.59L8 18z'/%3E%3Cpath d='M16 18l6-6-6-6-1.41 1.41L19.17 12l-4.58 4.59L16 18z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 28px;
+}
+
+.trans-caption {
+  margin-top: 18px;
+  font-size: 15px;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .trans-grid {
+    grid-template-columns: 1fr;
+  }
+}

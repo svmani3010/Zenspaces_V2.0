@@ -1,0 +1,544 @@
+/* --------------part 2----------------- */
+
+/* ── Reset / Base ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background: #ffffff;
+  color: #3e3e3e;
+  overflow-x: hidden;
+}
+
+.page {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media (max-width: 1080px) {
+  .ar-showcase {
+    display: flex; /* Use Flex for easier centering of children */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    max-width: 77vw;
+    width: 100%;
+    /* margin: 0 auto; Centers the 70% container itself on the page */
+
+    /* max-height: 660px; */
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    gap: 20px;
+  }
+}
+
+/* Mobile Layout (e.g., Phones) */
+@media (max-width: 1080px) {
+  .ar-showcase {
+    display: flex; /* Use Flex for easier centering of children */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    max-width: 77vw;
+    width: 100%;
+    /* margin: 0 auto; Centers the 70% container itself on the page */
+
+    /* max-height: 660px; */
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    gap: 20px;
+  }
+}
+/* ── AR Showcase ── */
+.ar-showcase {
+  display: flex; /* Use Flex for easier centering of children */
+  justify-content: center;
+  align-items: center;
+
+  max-width: 77vw;
+  width: 100%;
+  margin: 0 auto; /* Centers the 70% container itself on the page */
+
+  /* max-height: 660px; */
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  gap: 20px;
+}
+.ar-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 28px 0px;
+  position: relative;
+  min-height: 520px;
+}
+
+.ar-card--blue {
+  background: #e1f3fd;
+  min-height: 670px;
+  min-width: 580px;
+  border-radius: 8px;
+}
+.ar-card--yellow {
+  background: #fef3cb;
+  min-height: 670px;
+  min-width: 580px;
+  border-radius: 8px;
+}
+
+.ar-card__badge {
+  position: absolute;
+  top: 24px;
+  left: 32px;
+  font-size: 28px;
+  font-weight: 300;
+  color: #9dd3ee;
+  border: 2px solid #9dd3ee;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ar-card__badge--yellow {
+  color: #fae8b9;
+  border-color: #fae8b9;
+}
+.arFittingPhone_1 {
+  min-height: 410px;
+  min-width: 200px;
+}
+
+.ar-card__title {
+  font-size: 26px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+
+.ar-card__title--blue {
+  color: #9dd3ee;
+}
+.ar-card__title--orange {
+  color: #e1a072;
+}
+
+.ar-card__desc {
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  color: #8e9da5;
+  margin-bottom: 8px;
+  line-height: 1.55;
+  max-width: 380px;
+}
+
+.ar-card__desc--yellow {
+  color: #a79f76;
+}
+
+.ar-card__tagline {
+  font-size: 13px;
+  font-weight: 300;
+  color: #839299;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ar-card__tagline--yellow {
+  color: #9d976d;
+}
+
+.ar-card__phone-wrap {
+  width: 220px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ar-card__phone {
+  width: 100%;
+  min-height: 400px;
+  object-fit: contain;
+  border-radius: 24px;
+}
+
+.ar-card__footer-link {
+  font-size: 11px;
+  color: #858586;
+  text-align: center;
+  margin-top: 14px;
+}
+
+.ar-card__footer-link--yellow {
+  color: #a49a6d;
+}
+
+/* ── Tagline Row ── */
+.tagline-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0;
+  /* padding: 52px 0 40px; */
+  padding-top: 50px;
+  flex-wrap: wrap;
+}
+
+.tagline-row__try {
+  font-size: 48px;
+  font-weight: 300;
+  color: #3e3e3e;
+}
+
+.tagline-row__brand {
+  font-size: 48px;
+  font-weight: 400;
+  color: #9c60cc;
+}
+
+.tagline-row__sub {
+  font-size: 36px;
+  font-weight: 200;
+  color: #4b4b4b;
+}
+
+/* --- Tablet Adjustments --- */
+@media (max-width: 1080px) {
+  .features-section-1 {
+    max-width: 90vw;
+    gap: 20px;
+    padding: 40px 30px;
+    min-height: 500px;
+  }
+}
+
+/* --- Mobile Adjustments --- */
+@media (max-width: 1080px) {
+  .features-section-1 {
+    flex-direction: column; /* Stack elements vertically */
+    max-width: 95vw;
+    padding: 40px 20px;
+    min-height: auto; /* Let the content determine the height */
+    gap: 30px;
+    text-align: center;
+  }
+}
+.features-panel {
+  background: #eeeff4;
+  border-radius: 9px;
+  padding: 20px 104px 28px;
+}
+
+.features-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin-bottom: 28px;
+}
+
+.features-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.features-nav__logo-img {
+  height: 36px;
+  object-fit: contain;
+}
+
+.features-nav__right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.features-nav__download {
+  font-size: 12px;
+  color: #b2b4b8;
+  margin-right: 4px;
+}
+
+.features-nav__store-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #000;
+  border: 1px solid #4b4b4b;
+  border-radius: 4px;
+  padding: 4px 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s;
+}
+
+.features-nav__store-btn:hover {
+  opacity: 0.8;
+}
+
+.features-nav__store-icon {
+  width: 16px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.features-nav__store-label {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  color: #939393;
+  line-height: 1.2;
+}
+
+.features-nav__store-sub {
+  font-size: 9px;
+  font-weight: 300;
+  color: #6f6f6f;
+}
+
+.features-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #626469;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card__img-wrap {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  background: #eee;
+}
+
+.feature-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feature-card__body {
+  padding: 12px 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.feature-card__name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #7d7d84;
+}
+
+.feature-card__desc {
+  font-size: 11px;
+  color: #c8c9cb;
+  line-height: 1.5;
+}
+
+.feature-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 4px 0;
+}
+
+.feature-card__tag {
+  background: #cdcdcd;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 300;
+  color: #828388;
+  padding: 4px 10px;
+}
+
+.feature-card__btn {
+  width: 100%;
+  background: #363f4f;
+  border: 1px solid #757c86;
+  color: #a8adb5;
+  font-size: 13px;
+  border-radius: 4px;
+  padding: 9px 0;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+  margin-top: 4px;
+}
+
+.feature-card__btn:hover {
+  background: #4a5568;
+  color: #d1d5db;
+}
+
+.step-icon-wrapper {
+  position: absolute; /* Essential for pixel-perfect placement */
+  width: 70px;
+  height: 70px;
+  pointer-events: none; /* Allows clicks to pass through to elements below */
+  top: 20px; /* Gap from top */
+  left: 20px;
+}
+
+.step-icon-ring {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 4px solid;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-number {
+  font-family: "Arial", sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.step-dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.dot-top {
+  top: 5px;
+  left: -2px;
+}
+
+.dot-bottom {
+  bottom: 8px;
+  right: -4px;
+}
+
+/* Ensure the card is the anchor */
+.journey-card {
+  position: relative; /* REQUIRED for the icon to stay inside */
+  padding-top: 40px; /* Extra padding at top so icon doesn't cover title */
+  display: flex;
+}
+
+/* The positioning logic you asked for */
+.journey-step-icon-wrapper {
+  position: absolute;
+  top: 20px; /* 20px gap from top */
+  left: 20px; /* 20px gap from left */
+  width: 70px;
+  height: 70px;
+}
+
+/* Force the internal SVG/Div to stay at 0,0 within that wrapper */
+.journey-step-icon-wrapper .step-icon-wrapper {
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+/* Update the container to span the full width of the card */
+/* .step-icon-container {
+  position: relative; 
+  width: 100%;       /* Allow the icon to move all the way to the right */
+/* height: 80px;      Height remains the same to keep text below it */
+/* margin-bottom: 20px; */
+/* }  
+
+
+/* We will target the internal wrapper of the StepIcon component */
+.step-icon-wrapper {
+  position: absolute;
+  /* ADJUST THESE VALUES */
+  top: 10px; /* Gap from the top */
+  right: 10px; /* Gap from the right corner */
+
+  /* Ensure 'left' is unset so it doesn't conflict with 'right' */
+  left: auto;
+}
+
+/* ----------part 2 -------step 3 and 4 icons------ */
+
+/* ----------part 2 -------step 3 and 4 icons------ */
+
+/* Ensure the card is the reference point for absolute positioning */
+.ar-card {
+  position: relative;
+  padding: 40px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* The "Anchor" for the Step Icon - Moved to TOP-LEFT */
+.step-icon-corner {
+  position: absolute;
+  top: 20px; /* Gap from top */
+  left: 20px; /* Changed from 'right' to 'left' */
+  width: 70px;
+  height: 70px;
+}
+
+/* Ensure the StepIcon component itself stays inside this anchor */
+.step-icon-corner .step-icon-wrapper {
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+/* Push the title and content to the right to make room for the icon on the left */
+.ar-card__title,
+.ar-card__desc,
+.ar-card__tagline {
+  margin-left: 80px; /* Pushes text to the right so it doesn't overlap the icon */
+  max-width: 100%; /* Resets max-width since the left margin handles the gap */
+}

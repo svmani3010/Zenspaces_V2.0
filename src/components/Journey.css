@@ -1,0 +1,210 @@
+/* --- Section --- */
+.journey-section {
+  padding: 80px 20px;
+}
+
+.journey-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.journey-title span {
+  font-size: clamp(32px, 5vw, 44px);
+  color: #3e3e3e;
+}
+
+.journey-title .journey-accent {
+  color: #774987;
+  font-weight: 300;
+}
+
+/* --- The 2x2 Grid Logic --- */
+.journey-cards {
+  display: grid;
+  /* DESKTOP FULL MODE: 2 columns, 2 rows */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1100px; /* Limits width so cards don't stretch too thin */
+  margin: 0 auto; /* Centers the 2x2 grid on the screen */
+}
+
+/* --- Card Base --- */
+.journey-card {
+  position: relative;
+  border-radius: 24px;
+  /* SAFE ZONE: Sufficient top padding ensures title never hits icon */
+  padding: 120px 30px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  min-height: 600px;
+  box-sizing: border-box;
+}
+
+.journey-card-yellow {
+  background: #fef3ca;
+  border: 1px solid #fcf6e0;
+}
+.journey-card-blue {
+  background: #e1f4fe;
+  border: 1px solid #ecf7fc;
+}
+
+/* --- Step Icon Positioning --- */
+.journey-step-icon-wrapper {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 70px;
+  height: 70px;
+  z-index: 5;
+}
+
+/* --- Content Styling --- */
+.journey-card-content {
+  text-align: center;
+  width: 100%;
+}
+
+.journey-step-title {
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.journey-card-yellow .journey-step-title {
+  color: #d99666;
+}
+.journey-card-blue .journey-step-title {
+  color: #97cfec;
+}
+
+.journey-step-desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #6a6a6a;
+  margin-bottom: 8px;
+}
+
+.journey-step-note {
+  font-size: 13px;
+  color: #888;
+  font-style: italic;
+}
+
+/* --- Image Alignment --- */
+.journey-phone-wrapper {
+  margin-top: auto; /* Always pushes image to bottom regardless of text length */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.journey-phone-img {
+  width: 220px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 24px;
+}
+
+/* ========================
+   RESPONSIVE BREAKPOINTS
+======================== */
+
+/* TABLET VIEW (Up to 1080px) */
+/* We keep it 2x2 but shrink the gaps slightly */
+@media (max-width: 1080px) {
+  .journey-cards {
+    gap: 20px;
+    padding: 0 20px;
+  }
+  .journey-step-title {
+    text-align: center;
+    /* margin-bottom: 60px; */
+    padding-top: 30px;
+  }
+}
+
+/* MOBILE VIEW (Below 750px) */
+/* Switch from 2x2 to single column stack */
+@media (max-width: 750px) {
+  .journey-cards {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .journey-card {
+    min-height: 550px;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* --- GLOBAL ICON COLOR (Using Features theme) --- */
+  .journey-step-icon-wrapper {
+    /* This matches the 'Feature-name' color from your Features section */
+    color: #dd6962;
+    font-weight: bold;
+  }
+
+  /* --- FORCE CARD 3 TO YELLOW (Background & Title) --- */
+  .journey-cards .journey-card:nth-child(3) {
+    background-color: #fef3ca;
+    border: 1px solid #fcf6e0;
+  }
+
+  .journey-cards .journey-card:nth-child(3) .journey-step-title {
+    color: #d99666;
+  }
+
+  .journey-cards .journey-card:nth-child(3) .journey-step-icon-wrapper {
+    /* Using the purple accent from your Features section for variety */
+    color: #a665b5;
+  }
+
+  /* --- FORCE CARD 4 TO BLUE (Background & Title) --- */
+  .journey-cards .journey-card:nth-child(4) {
+    background-color: #e1f4fe;
+    border: 1px solid #ecf7fc;
+  }
+
+  .journey-cards .journey-card:nth-child(4) .journey-step-title {
+    color: #97cfec;
+  }
+
+  .journey-cards .journey-card:nth-child(4) .journey-step-icon-wrapper {
+    /* Using the salmon accent again */
+    color: #97cfec;
+  }
+
+  /* Centering titles for mobile */
+  .journey-step-title {
+    text-align: center;
+    padding-top: 30px;
+  }
+}
+/* SMALL MOBILE (Below 500px) */
+@media (max-width: 500px) {
+  .journey-step-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    top: 20px;
+    left: 20px;
+  }
+
+  .journey-step-title {
+    font-size: 22px;
+    text-align: center;
+    /* margin-bottom: 60px; */
+    padding-top: 30px;
+  }
+
+  .journey-phone-img {
+    width: 180px;
+  }
+}

@@ -1,0 +1,270 @@
+/* --- GLOBAL WRAPPER --- */
+.main-wrapper {
+  width: 100%;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Section Headings */
+.section-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 300; /* Light weight for 'Latest' and 'Contact' */
+  margin-bottom: 50px;
+  color: #444;
+}
+
+.highlight-purple {
+  color: #d182ff; /* The purple color for 'Blogs' and 'Us' */
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   1. BLOGS SECTION
+   ========================================================================== */
+.blogs-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 Columns */
+  gap: 30px;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.blog-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.blog-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* The "Visualize. Customize. Click to Own!" overlay */
+.image-overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Darkens image slightly to make text pop */
+  display: flex;
+  align-items: center;
+  padding-left: 30px; /* Align text to the left inside the image */
+  text-align: left;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.blog-date {
+  font-size: 12px;
+  color: #a0a0a0;
+  margin-bottom: 8px;
+}
+
+.blog-title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #555;
+  margin-bottom: 15px;
+  min-height: 45px; /* Keeps "Read More" aligned even if titles vary in length */
+}
+
+.read-more {
+  font-size: 12px;
+  font-weight: 700;
+  color: #888;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   2. CONTACT SECTION
+   ========================================================================== */
+.contact-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px 100px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 Columns */
+  gap: 30px;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 12px;
+  text-decoration: none; /* Removes underline from <a> tag */
+  transition: transform 0.2s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.office-card {
+  background-color: #6a0dad; /* Purple background */
+  color: #ffffff;
+}
+
+.email-card {
+  background-color: #0047ff; /* Blue background */
+  color: #ffffff;
+}
+
+.contact-label {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-value {
+  font-size: 20px;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+/* ==========================================================================
+   3. FOOTER SECTION
+   ========================================================================== */
+/* ========================
+    FOOTER SECTION
+======================== */
+.footer-section {
+  background-color: #000000;
+  padding: 100px 20px 60px; /* Generous top padding for the logo */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* Changed from center to flex-start to align items to the left */
+  align-items: flex-start;
+  /* justify-content handles the vertical spacing in a column; 
+     flex-start is the standard for 'top' or 'left' logic */
+  justify-content: flex-start;
+  text-align: left; /* Ensures text inside the items also aligns left */
+}
+
+.footer-logo-wrapper {
+  margin-bottom: 60px; /* Space before the horizontal line */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-logo {
+  max-width: 450px; /* Increased size to make the text in the logo readable */
+  width: 80%; /* Flexible width for smaller screens */
+  height: auto;
+  display: block;
+}
+
+/* The horizontal line seen in the reference */
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #333333; /* Dark grey line */
+  margin-bottom: 30px;
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+}
+
+.copyright {
+  color: #888888; /* Muted grey text */
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.footer-link {
+  color: #888888;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+  margin: 0 5px;
+}
+
+.footer-link:hover {
+  border-bottom: 1px solid #888888; /* Subtle underline on hover */
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .footer-section {
+    padding: 60px 20px 40px;
+  }
+
+  .footer-logo {
+    max-width: 300px; /* Scale down for mobile */
+  }
+
+  .copyright {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .blogs-grid {
+    grid-template-columns: 1fr 1fr; /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .blogs-grid,
+  .contact-grid {
+    grid-template-columns: 1fr; /* Stack everything on mobile */
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .brand-name {
+    font-size: 32px;
+    letter-spacing: 4px;
+  }
+}

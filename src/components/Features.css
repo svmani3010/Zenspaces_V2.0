@@ -1,0 +1,337 @@
+/* ========================
+   1. FEATURES SECTION BASE
+======================== */
+.features-section-1 {
+  margin: 40px auto;
+  width: 95%;
+  max-width: 1150px;
+  background-color: #fccfca;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 60px 40px;
+  border-radius: 24px;
+  min-height: 540px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* --- Left & Right Content Columns --- */
+.features-left,
+.features-right {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.features-left {
+  gap: 32px;
+  text-align: left;
+}
+
+.features-right {
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+/* --- Typography --- */
+.feature-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.feature-name {
+  font-size: 22px;
+  color: #dd6962;
+  font-weight: 400;
+}
+.feature-tagline {
+  font-size: 26px;
+  font-weight: 300;
+  color: #6c4e48;
+  line-height: 1.2;
+}
+.feature-desc {
+  font-size: 16px;
+  font-weight: 300;
+  color: #a47e79;
+  line-height: 1.5;
+}
+
+.try-label {
+  font-size: 20px;
+  color: #8e7066;
+}
+.try-brand {
+  font-size: 20px;
+  color: #a665b5;
+  font-weight: 600;
+}
+.try-sub {
+  font-size: 14px;
+  color: #bb968e;
+  margin-bottom: 8px;
+}
+
+/* --- Center Phone --- */
+.features-phone-center {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.features-phone-center img {
+  max-height: 450px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 24px;
+}
+
+/* ========================
+   2. UNIFIED BUTTON STYLING
+======================== */
+.features-store-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+}
+
+/* Shared Button Box Properties */
+.features-store-btn,
+.features-web-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 115px;
+  height: 35px;
+  border-radius: 8px;
+  overflow: hidden; /* Fixes white corners */
+  background-color: #000;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.features-store-btn:hover,
+.features-web-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+/* Shared Image Filling Logic */
+.features-store-btn img,
+.features-web-btn img:not(.web-icon) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 1;
+}
+
+/* --- Internal Button Content --- */
+.features-store-btn-text,
+.web-btn-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+}
+
+.features-store-btn-text {
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 35px; /* Adjust based on your store icon position */
+}
+
+.web-btn-content {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.web-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.features-store-btn-text span:first-child {
+  font-size: 9px;
+  color: #8c8c8c;
+  text-transform: uppercase;
+}
+
+.features-store-btn-text span:last-child {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ========================
+   3. RESPONSIVE BREAKPOINTS
+======================== */
+
+@media (max-width: 1080px) {
+  .features-section-1 {
+    padding: 40px 20px;
+    gap: 15px;
+  }
+  .feature-tagline {
+    font-size: 20px;
+  }
+  .features-phone-center img {
+    max-height: 380px;
+  }
+
+  .features-store-btns {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 700px) {
+  .features-section-1 {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  .features-left {
+    align-items: center;
+    text-align: center;
+    order: 1;
+  }
+  .features-phone-center {
+    order: 2;
+    margin: 20px 0;
+  }
+  .features-right {
+    order: 3;
+    width: 100%;
+  }
+  .features-store-btns {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 500px) {
+  .features-store-btns {
+    flex-direction: column;
+  }
+  .features-store-btn,
+  .features-web-btn {
+    width: 100%;
+    max-width: 220px;
+  }
+  .features-phone-center img {
+    max-height: 300px;
+  }
+  .features-store-btn,
+  .features-web-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 115px;
+    height: 35px;
+    border-radius: 8px;
+    overflow: hidden; /* Fixes white corners */
+    background-color: #000;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition:
+      transform 0.2s ease,
+      opacity 0.2s ease;
+  }
+
+  .features-store-btn:hover,
+  .features-web-btn:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+  }
+
+  /* Shared Image Filling Logic */
+  .features-store-btn img,
+  .features-web-btn img:not(.web-icon) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    z-index: 1;
+  }
+
+  /* --- Internal Button Content --- */
+  .features-store-btn-text,
+  .web-btn-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+  }
+
+  .features-store-btn-text {
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 35px; /* Adjust based on your store icon position */
+  }
+
+  .web-btn-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .web-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+  }
+
+  .features-store-btn-text span:first-child {
+    font-size: 9px;
+    color: #8c8c8c;
+    text-transform: uppercase;
+  }
+
+  .features-store-btn-text span:last-child {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}

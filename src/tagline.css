@@ -1,0 +1,20 @@
+/* ========================
+   TAGLINE
+======================== */
+.tagline-section {
+  text-align: center;
+  padding: 48px 40px 24px;
+}
+
+.tagline {
+  font-size: 36px;
+  color: #5c5c5c;
+  font-weight: 300;
+  display: inline;
+}
+
+.tagline-brand {
+  font-size: 36px;
+  color: #4b9ae7;
+  font-weight: 400;
+}

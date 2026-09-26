@@ -1,0 +1,322 @@
+/* ==========================================================================
+   1. HERO BASE SECTION
+   ========================================================================== */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  /* background-image: url("https://static.codia.ai/s/image_921771ec-0e45-4dbb-9581-6e665ccacae7.png"); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-content-1 {
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+  opacity: 30%;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 40px 10%;
+  padding-right: 20%;
+  max-width: 800px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Typography */
+.hero-label {
+  font-size: 12px;
+  color: #71706b;
+  margin-bottom: 8px;
+}
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 400;
+  color: #292929;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  padding-top: 80px;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  font-weight: 300;
+  color: #7e7772;
+  line-height: 1.4;
+  max-width: 340px;
+  margin-bottom: 32px;
+}
+
+/* ==========================================================================
+   2. HERO CTA CARD (Floating Box)
+   ========================================================================== */
+.hero-cta-card {
+  position: absolute;
+  right: 60px;
+  bottom: 40px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  z-index: 3;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+  min-width: 400px;
+}
+
+/* Inner Columns of the Card */
+.hero-cta-card-1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 24px;
+}
+
+.hero-cta-card-1:first-child {
+  border-right: 1px solid #eeeeee;
+  padding-left: 0;
+}
+
+.hero-cta-card-1:last-child {
+  padding-right: 0;
+}
+
+/* Card Text Styles */
+.hero-cta-title {
+  font-size: 14px;
+  color: #8b8b8b;
+}
+
+.hero-cta-brand {
+  font-size: 22px;
+  color: #5f90c3;
+  font-weight: 400;
+}
+
+.hero-cta-sub {
+  font-size: 13px;
+  color: #969696;
+  font-weight: 300;
+  margin-bottom: 4px;
+}
+
+/* ==========================================================================
+   3. STORE BUTTONS
+   ========================================================================== */
+.store-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.store-btn,
+.store-btn-web {
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  width: 140px;
+  height: 42px;
+  box-sizing: border-box;
+}
+
+.store-btn {
+  background: #000;
+  border: 1px solid #262626;
+  padding: 7px 14px;
+  gap: 8px;
+}
+
+.store-btn-web {
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  border: none;
+  overflow: hidden;
+}
+
+.web-btn-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #a4b9cb;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.store-btn img,
+.web-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.store-btn-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.store-btn-text span:first-child {
+  font-size: 9px;
+  color: #8c8c8c;
+}
+
+.store-btn-text span:last-child {
+  font-size: 14px;
+  font-weight: 700;
+  color: #afafaf;
+}
+
+/* ==========================================================================
+   4. NAVIGATION / HAMBURGER
+   ========================================================================== */
+.hamburger {
+  display: none; /* Hidden by default on desktop */
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #1a1a2e;
+  margin: 2px;
+}
+
+/* ==========================================================================
+   5. RESPONSIVE QUERIES (TABLET & MOBILE)
+   ========================================================================== */
+
+/* --- Tablet Layout (1080px down to 769px) --- */
+@media (max-width: 1080px) {
+  .hero {
+    min-height: 650px;
+    flex-direction: column;
+    justify-content: center;
+    background-position: center;
+  }
+
+  .hero-content {
+    padding: 60px 20px 20px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero-title {
+    font-size: 42px;
+    padding-top: 20px;
+  }
+
+  .hero-subtitle {
+    margin: 0 auto 40px;
+    max-width: 450px;
+  }
+
+  .hero-cta-card {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin: 0 auto 40px;
+    min-width: 550px;
+    flex-direction: row;
+    padding: 24px;
+  }
+  .hero-content-1 {
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    opacity: 30%;
+    margin: 100px;
+  }
+}
+
+/* --- Small Tablet / Large Mobile (768px down to 501px) --- */
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding-bottom: 40px;
+    background-position: 80% center;
+  }
+
+  .hero-title {
+    font-size: 32px;
+    line-height: 1.2;
+    padding-top: 40px;
+  }
+
+  .hero-cta-card {
+    width: 92%;
+    min-width: 0;
+    flex-direction: column; /* Card sections stack */
+    text-align: center;
+    gap: 16px;
+    padding: 20px;
+    margin: 10px auto;
+  }
+
+  .hero-cta-card-1:first-child {
+    border-right: none;
+    border-bottom: 1px solid #eeeeee;
+    padding: 0 0 16px 0;
+    width: 100%;
+  }
+
+  .store-buttons {
+    flex-direction: row; /* Buttons stay side-by-side until 500px */
+    justify-content: center;
+    gap: 12px;
+  }
+}
+
+/* --- STRICT VERTICAL MOBILE (500px and below) --- */
+@media (max-width: 500px) {
+  .hero-title {
+    font-size: 28px; /* Slightly smaller to prevent ugly wrapping on narrow screens */
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  /* Force buttons to stack vertically */
+  .store-buttons {
+    flex-direction: column !important;
+    align-items: center;
+    width: 100%;
+  }
+
+  .store-btn,
+  .store-btn-web {
+    width: 100%; /* Buttons take full width of the card padding */
+    max-width: 200px; /* But don't let them get giant */
+  }
+
+  .hero-cta-card {
+    padding: 15px; /* Tighter padding for narrow screens */
+  }
+
+  .hero-cta-brand {
+    font-size: 18px; /* Slightly smaller branding text */
+  }
+}

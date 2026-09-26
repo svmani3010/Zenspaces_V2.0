@@ -1,0 +1,563 @@
+/* ── Zen Philosophy ── */
+.zen-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 308px 48px;
+  text-align: center;
+}
+
+.zen-heading {
+  font-size: 40px;
+  line-height: 1.25;
+}
+
+.zen-heading--green {
+  color: #98d9a8;
+  font-weight: 300;
+}
+.zen-heading--dark {
+  color: #545454;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+
+.zen-body {
+  font-size: 15px;
+  font-weight: 200;
+  color: #b6b6b6;
+  line-height: 1.7;
+  max-width: 760px;
+  margin-bottom: 36px;
+}
+
+.zen-room-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+}
+
+.zen-room-img {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: contain;
+  display: block;
+}
+
+.zen-room__badge {
+  position: absolute;
+  bottom: 18%;
+  right: 28%;
+  font-size: 11px;
+  font-weight: 300;
+  color: #9f8171;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.zen-room__ar-icon {
+  position: absolute;
+  bottom: 4%;
+  right: 3%;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1080px) {
+  .ar-showcase {
+    grid-template-columns: 1fr;
+  }
+  .features-panel {
+    padding: 20px 24px 28px;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .zen-section {
+    padding: 48px 24px;
+  }
+  .tagline-row {
+    padding: 36px 16px 24px;
+  }
+  .tagline-row__try,
+  .tagline-row__brand {
+    font-size: 32px;
+  }
+  .tagline-row__sub {
+    font-size: 24px;
+  }
+  .features-section {
+    padding: 0 16px 32px;
+  }
+  .ar-showcase {
+    padding: 0 16px 32px;
+  }
+}
+
+/* CODIA_ENFORCED_FRAME_DRIVEN_SPLIT_SLOT_START */
+/* parentNodeId=101 */
+:where(
+    [data-codia-role="app_shell"],
+    [data-codia-role="scroll_content"],
+    [data-codia-role="shared_rail"]
+  )
+  *:not(#codia-required-assets):has(
+    > img[src="https://static.codia.ai/s/image_d6534fb5-d1c3-48f8-8265-1aded3929a18.png"]
+  ) {
+  position: relative !important;
+  width: min(223px, 100%) !important;
+  max-width: 223px !important;
+  min-height: 348px !important;
+  height: 348px !important;
+  box-sizing: border-box !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background-color: #ee3f01 !important;
+}
+:where(
+    [data-codia-role="app_shell"],
+    [data-codia-role="scroll_content"],
+    [data-codia-role="shared_rail"]
+  )
+  *:not(#codia-required-assets):has(
+    > img[src="https://static.codia.ai/s/image_d6534fb5-d1c3-48f8-8265-1aded3929a18.png"]
+  )
+  > img[src="https://static.codia.ai/s/image_d6534fb5-d1c3-48f8-8265-1aded3929a18.png"] {
+  position: absolute !important;
+  left: 0px !important;
+  top: 0px !important;
+  width: 223px !important;
+  height: 348px !important;
+  max-width: none !important;
+  max-height: none !important;
+  inset: auto !important;
+  object-fit: contain !important;
+  z-index: 0 !important;
+}
+:where(
+    [data-codia-role="app_shell"],
+    [data-codia-role="scroll_content"],
+    [data-codia-role="shared_rail"]
+  )
+  *:not(#codia-required-assets):has(
+    > img[src="https://static.codia.ai/s/image_d6534fb5-d1c3-48f8-8265-1aded3929a18.png"]
+  ):has(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  )
+  > *:has(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  ):has(
+    > :not(
+      img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"],
+      style,
+      script
+    )
+  ),
+:where(
+    [data-codia-role="app_shell"],
+    [data-codia-role="scroll_content"],
+    [data-codia-role="shared_rail"]
+  )
+  *:not(#codia-required-assets):has(
+    > img[src="https://static.codia.ai/s/image_d6534fb5-d1c3-48f8-8265-1aded3929a18.png"]
+  ):has(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  )
+  > *:not(
+    :has(
+      > img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+    )
+  ):has(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  ) {
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 348px !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  z-index: 1 !important;
+}
+:where(
+    [data-codia-role="app_shell"],
+    [data-codia-role="scroll_content"],
+    [data-codia-role="shared_rail"]
+  )
+  *:not(#codia-required-assets):has(
+    > img[src="https://static.codia.ai/s/image_d6534fb5-d1c3-48f8-8265-1aded3929a18.png"]
+  )
+  > img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"],
+:where(
+    [data-codia-role="app_shell"],
+    [data-codia-role="scroll_content"],
+    [data-codia-role="shared_rail"]
+  )
+  *:not(#codia-required-assets):has(
+    > img[src="https://static.codia.ai/s/image_d6534fb5-d1c3-48f8-8265-1aded3929a18.png"]
+  )
+  > *:has(
+    > img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  ):not(
+    :has(
+      > :not(
+        img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"],
+        style,
+        script
+      )
+    )
+  ),
+:where(
+    [data-codia-role="app_shell"],
+    [data-codia-role="scroll_content"],
+    [data-codia-role="shared_rail"]
+  )
+  *:not(#codia-required-assets):has(
+    > img[src="https://static.codia.ai/s/image_d6534fb5-d1c3-48f8-8265-1aded3929a18.png"]
+  ):has(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  )
+  > *:has(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  ):has(
+    > :not(
+      img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"],
+      style,
+      script
+    )
+  )
+  > img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"],
+:where(
+    [data-codia-role="app_shell"],
+    [data-codia-role="scroll_content"],
+    [data-codia-role="shared_rail"]
+  )
+  *:not(#codia-required-assets):has(
+    > img[src="https://static.codia.ai/s/image_d6534fb5-d1c3-48f8-8265-1aded3929a18.png"]
+  ):has(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  )
+  > *:not(
+    :has(
+      > img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+    )
+  ):has(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  )
+  > img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"],
+:where(
+    [data-codia-role="app_shell"],
+    [data-codia-role="scroll_content"],
+    [data-codia-role="shared_rail"]
+  )
+  *:not(#codia-required-assets):has(
+    > img[src="https://static.codia.ai/s/image_d6534fb5-d1c3-48f8-8265-1aded3929a18.png"]
+  ):has(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  )
+  > *:has(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  ):has(
+    > :not(
+      img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"],
+      style,
+      script
+    )
+  )
+  > *:has(
+    > img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  ):not(
+    :has(
+      > :not(
+        img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"],
+        style,
+        script
+      )
+    )
+  ),
+:where(
+    [data-codia-role="app_shell"],
+    [data-codia-role="scroll_content"],
+    [data-codia-role="shared_rail"]
+  )
+  *:not(#codia-required-assets):has(
+    > img[src="https://static.codia.ai/s/image_d6534fb5-d1c3-48f8-8265-1aded3929a18.png"]
+  ):has(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  )
+  > *:not(
+    :has(
+      > img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+    )
+  ):has(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  )
+  > *:has(
+    > img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  ):not(
+    :has(
+      > :not(
+        img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"],
+        style,
+        script
+      )
+    )
+  ) {
+  position: absolute !important;
+  left: 89px !important;
+  top: 251px !important;
+  width: 11px !important;
+  min-height: 13px !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+}
+:where(
+    [data-codia-role="app_shell"],
+    [data-codia-role="scroll_content"],
+    [data-codia-role="shared_rail"]
+  )
+  *:not(#codia-required-assets):has(
+    > img[src="https://static.codia.ai/s/image_d6534fb5-d1c3-48f8-8265-1aded3929a18.png"]
+  )
+  > img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"],
+:where(
+    [data-codia-role="app_shell"],
+    [data-codia-role="scroll_content"],
+    [data-codia-role="shared_rail"]
+  )
+  *:not(#codia-required-assets):has(
+    > img[src="https://static.codia.ai/s/image_d6534fb5-d1c3-48f8-8265-1aded3929a18.png"]
+  ):has(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  )
+  > *:has(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  ):has(
+    > :not(
+      img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"],
+      style,
+      script
+    )
+  )
+  > img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"],
+:where(
+    [data-codia-role="app_shell"],
+    [data-codia-role="scroll_content"],
+    [data-codia-role="shared_rail"]
+  )
+  *:not(#codia-required-assets):has(
+    > img[src="https://static.codia.ai/s/image_d6534fb5-d1c3-48f8-8265-1aded3929a18.png"]
+  ):has(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  )
+  > *:not(
+    :has(
+      > img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+    )
+  ):has(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  )
+  > img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"] {
+  height: 13px !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: contain !important;
+}
+:where(
+    [data-codia-role="app_shell"],
+    [data-codia-role="scroll_content"],
+    [data-codia-role="shared_rail"]
+  )
+  *:not(#codia-required-assets):has(
+    > img[src="https://static.codia.ai/s/image_d6534fb5-d1c3-48f8-8265-1aded3929a18.png"]
+  )
+  > *:has(
+    > img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  ):not(
+    :has(
+      > :not(
+        img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"],
+        style,
+        script
+      )
+    )
+  )
+  img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"],
+:where(
+    [data-codia-role="app_shell"],
+    [data-codia-role="scroll_content"],
+    [data-codia-role="shared_rail"]
+  )
+  *:not(#codia-required-assets):has(
+    > img[src="https://static.codia.ai/s/image_d6534fb5-d1c3-48f8-8265-1aded3929a18.png"]
+  ):has(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  )
+  > *:has(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  ):has(
+    > :not(
+      img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"],
+      style,
+      script
+    )
+  )
+  > *:has(
+    > img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  ):not(
+    :has(
+      > :not(
+        img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"],
+        style,
+        script
+      )
+    )
+  )
+  img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"],
+:where(
+    [data-codia-role="app_shell"],
+    [data-codia-role="scroll_content"],
+    [data-codia-role="shared_rail"]
+  )
+  *:not(#codia-required-assets):has(
+    > img[src="https://static.codia.ai/s/image_d6534fb5-d1c3-48f8-8265-1aded3929a18.png"]
+  ):has(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  )
+  > *:not(
+    :has(
+      > img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+    )
+  ):has(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  )
+  > *:has(
+    > img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  ):not(
+    :has(
+      > :not(
+        img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"],
+        style,
+        script
+      )
+    )
+  )
+  img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"] {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+}
+:where(
+    [data-codia-role="app_shell"],
+    [data-codia-role="scroll_content"],
+    [data-codia-role="shared_rail"]
+  )
+  *:not(#codia-required-assets):has(
+    > img[src="https://static.codia.ai/s/image_d6534fb5-d1c3-48f8-8265-1aded3929a18.png"]
+  ):has(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  )
+  > :not(
+    img[src="https://static.codia.ai/s/image_d6534fb5-d1c3-48f8-8265-1aded3929a18.png"]
+  ):not(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  ):not(
+    :has(
+      img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+    )
+  ) {
+  position: absolute !important;
+  left: 103px !important;
+  top: 250px !important;
+  width: 106px !important;
+  min-height: 80px !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 2 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+}
+:where(
+    [data-codia-role="app_shell"],
+    [data-codia-role="scroll_content"],
+    [data-codia-role="shared_rail"]
+  )
+  *:not(#codia-required-assets):has(
+    > img[src="https://static.codia.ai/s/image_d6534fb5-d1c3-48f8-8265-1aded3929a18.png"]
+  ):has(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  )
+  > *:has(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  ):has(
+    > :not(
+      img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"],
+      style,
+      script
+    )
+  )
+  > :not(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  ):not(
+    :has(
+      > img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+    )
+  ),
+:where(
+    [data-codia-role="app_shell"],
+    [data-codia-role="scroll_content"],
+    [data-codia-role="shared_rail"]
+  )
+  *:not(#codia-required-assets):has(
+    > img[src="https://static.codia.ai/s/image_d6534fb5-d1c3-48f8-8265-1aded3929a18.png"]
+  ):has(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  )
+  > *:not(
+    :has(
+      > img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+    )
+  ):has(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  )
+  > :not(
+    img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+  ):not(
+    :has(
+      > img[src="https://static.codia.ai/s/image_cd25d82c-5807-4fbc-bbf1-5fb20bd5bca2.png"]
+    )
+  ) {
+  position: absolute !important;
+  left: 103px !important;
+  top: 250px !important;
+  width: 106px !important;
+  min-height: 80px !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 2 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+}
+/* CODIA_ENFORCED_FRAME_DRIVEN_SPLIT_SLOT_END */
